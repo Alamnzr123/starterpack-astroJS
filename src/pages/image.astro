@@ -1,0 +1,25 @@
+---
+const images = await Astro.glob("/src/assets/*").then(files => {
+  return files.map(file => file.default);
+});
+---
+
+<div class="swiper">
+  <!-- Additional required wrapper -->
+  <div class="swiper-wrapper">
+    <!-- Slides -->
+    {
+      images.map(image => (
+        <div class="flex items-center justify-center swiper-slide">
+          <img
+            class="object-contain h-full rounded-lg"
+            src={image}
+            alt=""
+            loading="lazy"
+          />
+        </div>
+      ))
+    }
+  </div>
+  ...
+</div>

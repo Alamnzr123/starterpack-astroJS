@@ -12,6 +12,8 @@ const ElementImg = "img";
   <h1>HELLO {nama}</h1>
 </div>
 
+Read more <a id="alert" href="/news">TO NEWS PAGE</a>.
+
 <p class="paragraph">Aku mulai belajar Astro!</p>
 
 <ElementH1> Hello!!!!!!!!!!!!!!!!! </ElementH1>
@@ -20,3 +22,31 @@ const ElementImg = "img";
   style={{ width: "300px", height: "300px" }}
   src="https://th.bing.com/th/id/OIP.h4dY-A-LNcVW3aE5Yhn0VQHaEK?rs=1&pid=ImgDetMain"
 />
+
+<!-- <button onclick="myFunction()">Click me</button>
+<p id="demo"></p>
+
+<script>
+  function myFunction() {
+    document.getElementById(demo).innerHTML = "Hello World";
+  }
+</script> -->
+
+<!-- <button >Click me!</button> -->
+
+<script>
+  // Find all buttons with the `alert` class on the page.
+  const buttons = document.getElementById("alert");
+
+  function refreshPage() {
+    setTimeout(() => {
+      window.location.reload(false);
+    }, 500);
+    console.log("page to reload");
+  }
+
+  // Handle clicks on each button.
+  buttons?.addEventListener("click", () => {
+    refreshPage;
+  });
+</script>
